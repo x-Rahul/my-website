@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>User Data Collection Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>User Info Form</h1>
+    </header>
+
+    <section id="form-section">
+        <h2>Enter Your Details</h2>
+        <form id="userForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br><br>
+
+            <label for="sport">Favorite Sport:</label>
+            <select id="sport" name="sport" required>
+                <option value="">Select your sport</option>
+                <option value="Basketball">Basketball</option>
+                <option value="Football">Football</option>
+                <option value="Soccer">Soccer</option>
+                <option value="Tennis">Tennis</option>
+                <option value="Volleyball">Volleyball</option>
+            </select>
+            <br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="result" style="display: none;">
+            <h3>Submitted Data</h3>
+            <p><strong>Name:</strong> <span id="result-name"></span></p>
+            <p><strong>Favorite Sport:</strong> <span id="result-sport"></span></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Website. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
