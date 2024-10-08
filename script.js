@@ -6,7 +6,7 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
         sport: document.getElementById('sport').value
     };
 
-    fetch('https://script.google.com/macros/s/YOUR-SCRIPT-ID/exec', {
+    fetch('https://script.google.com/macros/s/AKfycbwiLYGkLxRDUnrPfI2h2-o3nB4YZLOT1mYxa7HNChbP/dev', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
