@@ -1,18 +1,24 @@
-// Handle form submission
 document.getElementById('userForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the form from refreshing the page
+    event.preventDefault();
 
-    // Get the user's name and favorite sport
-    var userName = document.getElementById('name').value;
-    var userSport = document.getElementById('sport').value;
+    const formData = {
+        name: document.getElementById('name').value,
+        sport: document.getElementById('sport').value
+    };
 
-    // Display the result in the result section
-    document.getElementById('result-name').innerText = userName;
-    document.getElementById('result-sport').innerText = userSport;
-    
-    // Show the result section
-    document.getElementById('result').style.display = 'block';
-    
-    // Clear the form
-    document.getElementById('userForm').reset();
+    fetch('https://script.google.com/macros/s/YOUR-SCRIPT-ID/exec', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Success:', data);
+        alert("Data submitted successfully!");
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+    });
 });
