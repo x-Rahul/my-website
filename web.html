@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="web.css">
+</head>
+<body>
+	<div class="container">
+		<form method="post" action="https://script.google.com/macros/s/AKfycbycOzoT7cXVx6dmS4TimZNeJF3DBdnCFrJYr8952Lk34aCgXrT5zovZV582qMxn1BKc/exec" name="contact-form">
+			<h4>Data Collection Form</h4>
+
+			<!-- User Name -->
+			<input type="text" name="name" placeholder="Name" required>
+			
+			<!-- Gender Selection -->
+			<select name="gender" class="select-gender" required>
+				<option value="" disabled selected>Gender</option>
+				<option value="Male">Male</option>
+				<option value="Female">Female</option>
+				<option value="Other">Other</option>
+			</select>
+			
+			<!-- Favorite Sport Selection -->
+			<select name="favorite-sport" class="select-sport" required>
+				<option value="" disabled selected>Favorite Sport</option>
+				<option value="Hockey">Hockey</option>
+				<option value="Football">Football</option>
+				<option value="Cricket">Cricket</option>
+				<option value="Badminton">Badminton</option>
+				<option value="Volleyball">Volleyball</option>
+				<option value="Basketball">Basketball</option>
+				<option value="Other">Other</option>
+			</select>
+
+			<!-- Favorite Media Content Selection -->
+			<select name="favorite-media" class="select-media" required>
+				<option value="" disabled selected>Favorite Media Content</option>
+				<option value="Movies">Movies</option>
+				<option value="Web Series">Web Series</option>
+				<option value="TV-Drama">TV-Drama</option>
+				<option value="Anime">Anime</option>
+			</select>
+			
+			<!-- Comment Section -->
+			<textarea name="comment" rows="7" placeholder="Comment"></textarea>
+			
+			<!-- Submit Button -->
+			<input type="submit" value="Submit" id="submit">
+		</form>
+	</div>
+
+	<script src="web.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;  /* Font for the page */
+    background-color: #eaeef3;  /* Light grey background for a softer look */
+    display: flex;  /* Center content */
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+}
+
+.container {
+    background-color: white;  /* White background for the form */
+    padding: 30px 40px;  /* Increased padding for a more spacious look */
+    border-radius: 12px;  /* More rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  /* Deeper shadow for a lifted effect */
+    width: 100%;  
+    max-width: 450px;  /* Slightly wider max-width */
+    text-align: center;  
+}
+
+/* Heading Styles */
+h4 {
+    font-size: 26px;  /* Slightly larger heading */
+    margin-bottom: 20px;  
+    color: #333;  
+    font-weight: 600;  /* Bolder font weight for emphasis */
+}
+
+/* Style for Inputs and Dropdowns */
+input[type="text"], 
+input[type="tel"],  /* Added input for mobile number */
+textarea, 
+select {  
+    width: 100%;  
+    padding: 12px;  /* Increased padding for better touch targets */
+    margin: 10px 0;  
+    border: 1px solid #ccc;  /* Lighter border color */
+    border-radius: 8px;  /* Rounded corners for inputs */
+    box-sizing: border-box;  
+    font-size: 16px;  
+    color: #333;  
+    transition: border-color 0.3s;  /* Smooth transition for border color on focus */
+}
+
+/* Placeholder Color */
+input[type="text"]::placeholder,
+input[type="tel"]::placeholder, 
+textarea::placeholder {  
+    color: #aaa;  /* Softer grey for placeholders */
+}
+
+/* Textarea Resize */
+textarea {
+    resize: none;  /* Disable resizing */
+}
+
+/* Input Focus Effect */
+input[type="text"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {  
+    border-color: #5c9ded;  /* Change border color on focus */
+    outline: none;  /* Remove default outline */
+}
+
+/* Submit Button Styling */
+input[type="submit"] {
+    width: 100%;  
+    padding: 12px;  
+    background-color: #5c9ded;  /* Light blue background */
+    color: white;  
+    border: none;  
+    border-radius: 8px;  /* Rounded corners for button */
+    cursor: pointer;  
+    font-size: 16px;  
+    font-weight: bold;  /* Bolder font for button text */
+    transition: background-color 0.3s ease, transform 0.2s;  /* Smooth background transition and scale effect */
+}
+
+/* Hover and Active Effects */
+input[type="submit"]:hover {
+    background-color: #4079d0;  /* Darker blue on hover */
+    transform: translateY(-2px);  /* Slight lift effect on hover */
+}
+
+input[type="submit"]:active {
+    transform: translateY(1px);  /* Subtle press effect */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {  
+    .container {
+        padding: 20px 30px;  
+    }
+
+    h4 {
+        font-size: 22px;  
+    }
+
+    input[type="text"],
+    input[type="tel"],
+    textarea {  
+        font-size: 15px;  
+    }
+
+    input[type="submit"] {
+        font-size: 15px;  
+    }
+}
